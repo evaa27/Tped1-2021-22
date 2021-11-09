@@ -54,225 +54,242 @@
         margin-left: 20px;
         margin-top: 300px;
     }
+
     a:hover img {
         filter: saturate(0);
         box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
     }
+
     body.lb-disable-scrolling {
-  overflow: hidden;
-}
+        overflow: hidden;
+    }
 
-.lightboxOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: black;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  display: none;
-}
+    .lightboxOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: black;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+        opacity: 0.8;
+        display: none;
+    }
 
-.lightbox {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-  text-align: center;
-  line-height: 0;
-  font-weight: normal;
-  outline: none;
-}
+    .lightbox {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        text-align: center;
+        line-height: 0;
+        font-weight: normal;
+        outline: none;
+    }
 
-.lightbox .lb-image {
-  display: block;
-  height: auto;
-  max-width: inherit;
-  max-height: none;
-  border-radius: 3px;
+    .lightbox .lb-image {
+        display: block;
+        height: auto;
+        max-width: inherit;
+        max-height: none;
+        border-radius: 3px;
 
-  /* Image border */
-  border: 4px solid white;
-}
+        /* Image border */
+        border: 4px solid white;
+    }
 
-.lightbox a img {
-  border: none;
-}
+    .lightbox a img {
+        border: none;
+    }
 
-.lb-outerContainer {
-  position: relative;
-  *zoom: 1;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  border-radius: 4px;
+    .lb-outerContainer {
+        position: relative;
+        *zoom: 1;
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        border-radius: 4px;
 
-  /* Background color behind image.
+        /* Background color behind image.
      This is visible during transitions. */
-  background-color: white;
-}
+        background-color: white;
+    }
 
-.lb-outerContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .lb-outerContainer:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-.lb-loader {
-  position: absolute;
-  top: 43%;
-  left: 0;
-  height: 25%;
-  width: 100%;
-  text-align: center;
-  line-height: 0;
-}
+    .lb-loader {
+        position: absolute;
+        top: 43%;
+        left: 0;
+        height: 25%;
+        width: 100%;
+        text-align: center;
+        line-height: 0;
+    }
 
-.lb-cancel {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
-  background: url(../images/loading.gif) no-repeat;
-}
+    .lb-cancel {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto;
+        background: url(../images/loading.gif) no-repeat;
+    }
 
-.lb-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-}
+    .lb-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+    }
 
-.lb-container > .nav {
-  left: 0;
-}
+    .lb-container>.nav {
+        left: 0;
+    }
 
-.lb-nav a {
-  outline: none;
-  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-}
+    .lb-nav a {
+        outline: none;
+        background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+    }
 
-.lb-prev, .lb-next {
-  height: 100%;
-  cursor: pointer;
-  display: block;
-}
+    .lb-prev,
+    .lb-next {
+        height: 100%;
+        cursor: pointer;
+        display: block;
+    }
 
-.lb-nav a.lb-prev {
-  width: 34%;
-  left: 0;
-  float: left;
-  background: url(../images/prev.png) left 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
+    .lb-nav a.lb-prev {
+        width: 34%;
+        left: 0;
+        float: left;
+        background: url(../images/prev.png) left 48% no-repeat;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        -webkit-transition: opacity 0.6s;
+        -moz-transition: opacity 0.6s;
+        -o-transition: opacity 0.6s;
+        transition: opacity 0.6s;
+    }
 
-.lb-nav a.lb-prev:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
+    .lb-nav a.lb-prev:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
 
-.lb-nav a.lb-next {
-  width: 64%;
-  right: 0;
-  float: right;
-  background: url(../images/next.png) right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
+    .lb-nav a.lb-next {
+        width: 64%;
+        right: 0;
+        float: right;
+        background: url(../images/next.png) right 48% no-repeat;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        -webkit-transition: opacity 0.6s;
+        -moz-transition: opacity 0.6s;
+        -o-transition: opacity 0.6s;
+        transition: opacity 0.6s;
+    }
 
-.lb-nav a.lb-next:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
+    .lb-nav a.lb-next:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
 
-.lb-dataContainer {
-  margin: 0 auto;
-  padding-top: 5px;
-  *zoom: 1;
-  width: 100%;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
+    .lb-dataContainer {
+        margin: 0 auto;
+        padding-top: 5px;
+        *zoom: 1;
+        width: 100%;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
 
-.lb-dataContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .lb-dataContainer:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-.lb-data {
-  padding: 0 4px;
-  color: #ccc;
-}
+    .lb-data {
+        padding: 0 4px;
+        color: #ccc;
+    }
 
-.lb-data .lb-details {
-  width: 85%;
-  float: left;
-  text-align: left;
-  line-height: 1.1em;
-}
+    .lb-data .lb-details {
+        width: 85%;
+        float: left;
+        text-align: left;
+        line-height: 1.1em;
+    }
 
-.lb-data .lb-caption {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em;
-}
+    .lb-data .lb-caption {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1em;
+    }
 
-.lb-data .lb-caption a {
-  color: #4ae;
-}
+    .lb-data .lb-caption a {
+        color: #4ae;
+    }
 
-.lb-data .lb-number {
-  display: block;
-  clear: left;
-  padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999;
-}
+    .lb-data .lb-number {
+        display: block;
+        clear: left;
+        padding-bottom: 1em;
+        font-size: 12px;
+        color: #999999;
+    }
 
-.lb-data .lb-close {
-  display: block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: url(../images/close.png) top right no-repeat;
-  text-align: right;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
+    .lb-data .lb-close {
+        display: block;
+        float: right;
+        width: 30px;
+        height: 30px;
+        background: url(../images/close.png) top right no-repeat;
+        text-align: right;
+        outline: none;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+        opacity: 0.7;
+        -webkit-transition: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+    }
 
-.lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
+    .lb-data .lb-close:hover {
+        cursor: pointer;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
 
+    div.polaroid {
+        width: 32vw;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    div.container {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 10px 20px;
+        display: block;
+    }
 </style>
 
 <head>
     <title>Galería</title>
     <link rel="stylesheet" type="text/css" href="galeria/css/lightbox.css" />
 
-  
+
     <script type="text/javascript" src="js/prototype.js"></script>
-      <script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
-      <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+    <script type="text/javascript" src="js/lightbox.js"></script>
 </head>
 
 <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
@@ -290,67 +307,111 @@
     </header>
 
     <section>
-
-        <a href="imagenes/_MG_9792.jpg" rel="LIGHTBOX">
-            <img alt="Imagen 2" src="imagenes/_MG_9792.jpg" >
-        </a>
-
+        <div class="polaroid">
+            <a href="imagenes/_MG_9792.jpg" rel="LIGHTBOX">
+                <img alt="Imagen 2" src="imagenes/_MG_9792.jpg">
+            </a>
+            <div class="container">
+                <p>Gorka</p>
+            </div>
+        </div>
+        <div class="polaroid">
             <a href="imagenes/_MG_9793.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 3" src="imagenes/_MG_9793.jpg">
             </a>
+            <div class="container">
+                <p>Tabuco 1</p>
+            </div>
+        </div>
 
-
+        <div class="polaroid">
             <a href="imagenes/_MG_9795.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 5" src="imagenes/_MG_9795.jpg">
 
             </a>
+            <div class="container">
+                <p>Nur</p>
+            </div>
+        </div>
 
-
+        <div class="polaroid">
             <a href="imagenes/_MG_9797.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 7" src="imagenes/_MG_9797.jpg">
             </a>
+            <div class="container">
+                <p>Tabuco 2</p>
+            </div>
+        </div>
+        <div class="polaroid">
             <a href="imagenes/_MG_9794.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 4" src="imagenes/_MG_9794.jpg">
             </a>
-
+            <div class="container">
+                <p>Gorka y Nur</p>
+            </div>
+        </div>
+        <div class="polaroid">
             <a href="imagenes/_MG_9791.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 1" src="imagenes/_MG_9791.jpg">
             </a>
+            <div class="container">
+                <p>Nur 2</p>
+            </div>
+        </div>
 
-
+        <div class="polaroid">
             <a href="imagenes/_MG_8396.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 1" src="imagenes/_MG_8396.jpg">
             </a>
+            <div class="container">
+                <p>Barquito</p>
+            </div>
+        </div>
+        <div class="polaroid">
             <a href="imagenes/_MG_8424.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 2" src="imagenes/_MG_8424.jpg">
             </a>
+            <div class="container">
+                <p>Old film
+                </p>
+            </div>
+        </div>
+        <div class="polaroid">
 
             <a href="imagenes/_MG_8494.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 4" src="imagenes/_MG_8494.jpg">
             </a>
-
-            <a href="imagenes/Edit3.jpg" rel="LIGHTBOX">
-                <img alt="Imagen 6" src="imagenes/Edit3.jpg">
-            </a>
+            <div class="container">
+                <p>Borde</p>
+            </div>
+        </div>
+        <div class="polaroid">
             <a href="imagenes/Edit4.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 7" src="imagenes/Edit4.jpg">
             </a>
+            <div class="container">
+                <p>Luz</p>
+            </div>
+        </div>
+        <div class="polaroid">
             <a href="imagenes/Edit7.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 9" src="imagenes/Edit7.jpg">
             </a>
+            <div class="container">
+                <p>A través</p>
+            </div>
+        </div>
+        <div class="polaroid">
             <a href="imagenes/Edit2.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 5" src="imagenes/Edit2.jpg">
 
             </a>
-            <script>
-                lightbox.option({
-                  'resizeDuration': 200,
-                  'wrapAround': false,
-                  disableScrolling: false,
-                  positionFromTop:	50,
-                })
-            </script>
-            
+            <div class="container">
+                <p>Entrada</p>
+            </div>
+        </div>
+
+
 
     </section>
 
