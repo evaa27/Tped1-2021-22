@@ -55,10 +55,7 @@
         margin-top: 300px;
     }
 
-    a:hover img {
-        filter: saturate(0);
-        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
-    }
+    
 
     body.lb-disable-scrolling {
         overflow: hidden;
@@ -266,20 +263,31 @@
         opacity: 1;
     }
 
-    div.polaroid {
-        width: 32vw;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 25px;
-        display: block;
-    }
+   article {
+       height: 80vh;
+       width: 32px;
+       position: relative;
 
-    div.container {
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        padding: 10px 20px;
-        display: block;
-    }
+
+   }
+   article img {
+       height: 100%;
+       position: absolute;
+    
+   }
+   article h3 {
+       position: absolute;
+      
+       bottom: 0;
+       font-size: 0;
+   }
+   article:hover h3 {
+       color: black;
+       font-size: 27px;
+       transition: .5s ease;
+       font-family: Helvetica;
+
+   }
 </style>
 
 <head>
@@ -307,109 +315,97 @@
     </header>
 
     <section>
-        <div class="polaroid">
+       <article>
             <a href="imagenes/_MG_9792.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 2" src="imagenes/_MG_9792.jpg">
             </a>
-            <div class="container">
-                <p>Gorka</p>
-            </div>
-        </div>
-        <div class="polaroid">
+           <h3>Gorka</h3>
+            </article>
+        <article>
             <a href="imagenes/_MG_9793.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 3" src="imagenes/_MG_9793.jpg">
             </a>
-            <div class="container">
-                <p>Tabuco 1</p>
-            </div>
-        </div>
+            
+                <h3>Tabuco 1</h3>
+            </article>
 
-        <div class="polaroid">
+        <article>
             <a href="imagenes/_MG_9795.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 5" src="imagenes/_MG_9795.jpg">
 
             </a>
-            <div class="container">
-                <p>Nur</p>
-            </div>
-        </div>
+            
+                <h3>Nur</h3>
+            </article>
 
-        <div class="polaroid">
+        <article>
             <a href="imagenes/_MG_9797.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 7" src="imagenes/_MG_9797.jpg">
             </a>
-            <div class="container">
-                <p>Tabuco 2</p>
-            </div>
-        </div>
-        <div class="polaroid">
+            
+                <h3>Tabuco 2</h3>
+            </article>
+        <article>
             <a href="imagenes/_MG_9794.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 4" src="imagenes/_MG_9794.jpg">
             </a>
-            <div class="container">
-                <p>Gorka y Nur</p>
-            </div>
-        </div>
-        <div class="polaroid">
+         
+                <h3>Gorka y Nur</h3>
+            </article>
+        <article>
             <a href="imagenes/_MG_9791.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 1" src="imagenes/_MG_9791.jpg">
             </a>
-            <div class="container">
-                <p>Nur 2</p>
-            </div>
-        </div>
+           
+                <h3>Nur 2</h3>
+            
+        </article>
 
-        <div class="polaroid">
+        <article>
             <a href="imagenes/_MG_8396.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 1" src="imagenes/_MG_8396.jpg">
             </a>
-            <div class="container">
-                <p>Barquito</p>
-            </div>
-        </div>
-        <div class="polaroid">
+           
+                <h3>Barquito</h3>
+            </article>
+        <article>
             <a href="imagenes/_MG_8424.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 2" src="imagenes/_MG_8424.jpg">
             </a>
-            <div class="container">
-                <p>Old film
-                </p>
-            </div>
-        </div>
-        <div class="polaroid">
+           
+                <h3>Old film
+                </h3>
+            </article>
+        <article>
 
             <a href="imagenes/_MG_8494.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 4" src="imagenes/_MG_8494.jpg">
             </a>
-            <div class="container">
-                <p>Borde</p>
-            </div>
-        </div>
-        <div class="polaroid">
+            
+                <h3>Borde</h3>
+        </article>
+        <article>
             <a href="imagenes/Edit4.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 7" src="imagenes/Edit4.jpg">
             </a>
-            <div class="container">
-                <p>Luz</p>
-            </div>
-        </div>
-        <div class="polaroid">
+            
+                <h3>Luz</h3>
+            </article>
+        <article>
             <a href="imagenes/Edit7.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 9" src="imagenes/Edit7.jpg">
             </a>
             <div class="container">
-                <p>A través</p>
-            </div>
-        </div>
-        <div class="polaroid">
+                <h3>A través</h3>
+            </article>
+        <article>
             <a href="imagenes/Edit2.jpg" rel="LIGHTBOX">
                 <img alt="Imagen 5" src="imagenes/Edit2.jpg">
 
             </a>
-            <div class="container">
-                <p>Entrada</p>
-            </div>
-        </div>
+           
+                <h3>Entrada</h3>
+            </article>
 
 
 
